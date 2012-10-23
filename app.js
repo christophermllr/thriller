@@ -19,7 +19,7 @@
             return false;
         }
         
-        var audio = $("#audio").get(0);
+        var audio = $("audio").get(0);
       
         $("html").on("keydown", function(e) {
             if (e.keyCode === 32 && !blockPlay) {
@@ -30,7 +30,7 @@
       
         $(audio).bind('timeupdate', function() {
             if(audio.duration === audio.currentTime) {
-                $("#progress").val(0);
+                $("progress").val(0);
                 countdown = setInterval(function() {
                     $("p").html(count + " seconds remaining!");
                     if (count === 0) {
@@ -42,7 +42,7 @@
                     count--;
                 }, 1000);
             } else {
-                $("#progress").val((audio.currentTime / audio.duration) * 100);
+                $("progress").val((audio.currentTime / audio.duration) * 100);
             }
         });
     });
