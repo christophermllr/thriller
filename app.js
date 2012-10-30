@@ -21,7 +21,7 @@
         
         var audio = $("audio").get(0);
       
-        $("html").on("keydown", function(e) {
+        $("html").on("keyup", function(e) {
             if (e.keyCode === 32 && !blockPlay) {
               audio.play();
               blockPlay = true;
