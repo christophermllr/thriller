@@ -14,7 +14,7 @@
     });
     
     $(function() {
-        if (!window.Modernizr.audio.mp3 || window.Modernizr.audio.mp3 === "") {
+        if (!window.Modernizr.audio.mp3) {
             alert("GET A REAL BROWSER");
             return false;
         }
